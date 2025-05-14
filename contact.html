@@ -2,90 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us - Puppy Playhouse</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 </head>
 <body class="bg-slate-50 text-slate-800">
 
-  <!-- Navbar -->
-  <header class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-sm shadow-md">
-    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-      <div class="flex items-center space-x-3">
-        <img src="marklogo.png" alt="Puppy Playhouse Logo" class="logo-image h-10 w-10 transition-transform duration-300 hover:scale-105">
-        <h1 class="text-2xl font-bold tracking-tight text-slate-900">Puppy Playhouse</h1>
-      </div>
-      <nav class="hidden md:flex space-x-6 text-sm font-medium">
-        <a href="index.html" class="hover:text-blue-500 hover:underline transition">Home</a>
-        <a href="about.html" class="hover:text-blue-500 hover:underline transition">About</a>
-        <a href="services.html" class="hover:text-blue-500 hover:underline transition">Services</a>
-        <a href="events.html" class="hover:text-blue-500 hover:underline transition">Events</a>
-        <a href="contact.html" class="hover:text-blue-500 hover:underline transition">Contact</a>
-      </nav>
-      <button id="mobileMenuBtn" class="md:hidden text-slate-700 focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
+<!-- Navbar omitted for brevity (use your original navbar here) -->
+
+<section class="relative py-28 px-6 bg-white overflow-hidden">
+  <div class="relative z-10 max-w-4xl mx-auto">
+    <h1 class="text-4xl font-extrabold text-center mb-4">Get In Touch</h1>
+    <p class="text-center text-slate-600 mb-10 max-w-xl mx-auto">
+      Have questions, want to schedule a tour, or just want to say hi? We'd love to hear from you and your pup.
+    </p>
+
+    <div class="bg-slate-50 p-10 rounded-2xl shadow-lg">
+      <form id="contactForm" class="space-y-6">
+        <div>
+          <label for="name" class="block mb-2 font-medium">Your Name</label>
+          <input type="text" id="name" name="name" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-300">
+        </div>
+        <div>
+          <label for="pup_name" class="block mb-2 font-medium">Pup Name</label>
+          <input type="text" id="pup_name" name="pup_name" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-300">
+        </div>
+        <div>
+          <label for="email" class="block mb-2 font-medium">Email</label>
+          <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-300">
+        </div>
+        <div>
+          <label for="topic" class="block mb-2 font-medium">Topic</label>
+          <input type="text" id="topic" name="topic" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-300">
+        </div>
+        <div>
+          <label for="message" class="block mb-2 font-medium">Message</label>
+          <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-300"></textarea>
+        </div>
+        <button type="submit" class="bg-blue-500 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-600 transition">
+          Send Message
+        </button>
+      </form>
     </div>
-    <div id="mobileMenu" class="hidden md:hidden bg-white/90 backdrop-blur-sm px-4 py-4 space-y-2 text-sm font-medium border-t border-slate-200">
-      <a href="index.html" class="block hover:text-blue-500">Home</a>
-      <a href="about.html" class="block hover:text-blue-500">About</a>
-      <a href="services.html" class="block hover:text-blue-500">Services</a>
-      <a href="events.html" class="block hover:text-blue-500">Events</a>
-      <a href="contact.html" class="block hover:text-blue-500">Contact</a>
-    </div>
-  </header>
 
-  <!-- Contact Section -->
-  <section class="relative py-28 px-6 bg-white overflow-hidden">
-    <div class="absolute bottom-0 left-0 right-0 h-48 bg-[url('images/wave.svg')] bg-no-repeat bg-bottom bg-cover opacity-10"></div>
-    <div class="relative z-10 max-w-4xl mx-auto">
-      <h1 class="text-4xl font-extrabold text-center mb-4">Get In Touch</h1>
-      <p class="text-center text-slate-600 mb-10 max-w-xl mx-auto">
-        Have questions, want to schedule a tour, or just want to say hi? We'd love to hear from you and your pup.
-      </p>
-
-      <div class="bg-slate-50 p-10 rounded-2xl shadow-lg">
-        <form id="contactForm" class="space-y-6">
-          <div>
-            <label for="name" class="block mb-2 font-medium">Your Name</label>
-            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300">
-          </div>
-          <div>
-            <label for="pup_name" class="block mb-2 font-medium">Pup Name</label>
-            <input type="text" id="pup_name" name="pup_name" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300">
-          </div>
-          <div>
-            <label for="email" class="block mb-2 font-medium">Email</label>
-            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300">
-          </div>
-          <div>
-            <label for="topic" class="block mb-2 font-medium">Topic</label>
-            <input type="text" id="topic" name="topic" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300">
-          </div>
-          <div>
-            <label for="message" class="block mb-2 font-medium">Message</label>
-            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300"></textarea>
-          </div>
-          <button type="submit" class="bg-blue-500 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-600 transition">
-            Send Message
-          </button>
-        </form>
-      </div>
-
-      <div class="mt-16 text-center">
-        <h2 class="text-2xl font-bold mb-4">Business Hours</h2>
-        <ul class="text-slate-600 space-y-1">
-          <li><strong>Mon–Fri:</strong> 8:00am – 6:00pm</li>
-          <li><strong>Saturday:</strong> 9:00am – 4:00pm</li>
-          <li><strong>Sunday:</strong> Closed</li>
-        </ul>
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal" class="fixed inset-0 bg-black bg-opacity-40 hidden items-center justify-center z-50">
+      <div class="bg-white p-8 rounded-xl shadow-xl text-center space-y-4 max-w-sm">
+        <h2 class="text-2xl font-bold text-green-600">Message Sent!</h2>
+        <p class="text-slate-700">Thank you for contacting Puppy Playhouse. We'll be in touch soon!</p>
+        <button onclick="closeModal()" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Close</button>
       </div>
     </div>
-  </section>
+
+    <div class="mt-16 text-center">
+      <h2 class="text-2xl font-bold mb-4">Business Hours</h2>
+      <ul class="text-slate-600 space-y-1">
+        <li><strong>Mon–Fri:</strong> 8:00am – 6:00pm</li>
+        <li><strong>Saturday:</strong> 9:00am – 4:00pm</li>
+        <li><strong>Sunday:</strong> Closed</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<script>
+const SUPABASE_URL = 'https://usqyfqwupvtqrtrbtjxa.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVzcXlmcXd1cHZ0cXJ0cmJ0anhhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcxOTYyNDMsImV4cCI6MjA2Mjc3MjI0M30.GJWwTOBDVsdxrMK3jNz-oNFe5BlAZaN5MBvrzZO5Wzc';  
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+document.getElementById('contactForm').addEventListener('submit', async function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const pup_name = document.getElementById('pup_name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const topic = document.getElementById('topic').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  const { data, error } = await supabaseClient
+    .from('contact')
+    .insert([{ name, pup_name, email, topic, message }]);
+
+  if (error) {
+    alert('Error submitting form: ' + error.message);
+  } else {
+    document.getElementById('contactForm').reset();
+    document.getElementById('confirmationModal').classList.remove('hidden');
+  }
+});
+
+function closeModal() {
+  document.getElementById('confirmationModal').classList.add('hidden');
+}
+</script>
 
   <!-- Footer -->
   <footer class="bg-white border-t border-slate-200 py-12 mt-24">
