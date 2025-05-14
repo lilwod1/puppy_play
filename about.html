@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Puppy Playhouse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-slate-800">
+
+   <!-- Responsive & Enhanced Navbar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-sm shadow-md">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <!-- Logo and Site Title -->
+    <div class="flex items-center space-x-3">
+      <img src="marklogo.png" alt="Puppy Playhouse Logo" class="logo-image h-10 w-10 transition-transform duration-300 hover:scale-105">
+      <h1 class="text-2xl font-bold tracking-tight text-slate-900">Puppy Playhouse</h1>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-6 text-sm font-medium">
+      <a href="index.html" class="hover:text-blue-500 hover:underline transition">Home</a>
+      <a href="about.html" class="hover:text-blue-500 hover:underline transition">About</a>
+      <a href="services.html" class="hover:text-blue-500 hover:underline transition">Services</a>
+      <a href="events.html" class="hover:text-blue-500 hover:underline transition">Events</a>
+      <a href="contact.html" class="hover:text-blue-500 hover:underline transition">Contact</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobileMenuBtn" class="md:hidden text-slate-700 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white/90 backdrop-blur-sm px-4 py-4 space-y-2 text-sm font-medium border-t border-slate-200">
+    <a href="index.html" class="block hover:text-blue-500">Home</a>
+    <a href="about.html" class="block hover:text-blue-500">About</a>
+    <a href="services.html" class="block hover:text-blue-500">Services</a>
+    <a href="events.html" class="block hover:text-blue-500">Events</a>
+    <a href="contact.html" class="block hover:text-blue-500">Contact</a>
+  </div>
+</header>
+
+<script>
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const menu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+
+<!-- Hero Section -->
+<section class="h-screen flex items-center justify-center text-center px-6 bg-cover bg-center relative" style="background-image: url('pawbackground1.png');">
+  <!-- Subtle Gradient Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-white/70 to-white/90 z-0"></div>
+  <div class="text-slate-900 max-w-3xl px-4 sm:px-10 z-10">
+    <h2 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-4 animate-fade-in">
+      Our Story, Your Pack
+    </h2>
+    <p class="text-base sm:text-lg mb-6 animate-fade-in delay-200">
+      What started as a joyful gathering place for neighborhood pups has blossomed into a full-service canine retreat. At Puppy Playhouse, we don’t just care for dogs — we celebrate them.
+    </p>
+    </a>
+  </div>
+</section>
+
+
+
+    <!-- Meet the Team -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">Meet Our Pack</h2>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10 text-center">
+    
+          <!-- Avery -->
+          <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fade-in">
+            <img src="images/staff1.png" alt="Trainer" class="rounded-full w-64 h-64 mx-auto mb-4 object-cover transform hover:scale-105 transition duration-300" />
+            <h4 class="font-semibold text-lg">Avery</h4>
+            <p class="text-sm text-slate-500">Lead Trainer & Behaviorist</p>
+            <p class="text-sm text-slate-600 mt-2">Avery specializes in positive reinforcement techniques and has trained over 500 happy pups.</p>
+          </div>
+    
+          <!-- Jules -->
+          <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fade-in delay-100">
+            <img src="images/staff2.png" alt="Groomer" class="rounded-full w-64 h-64 mx-auto mb-4 object-cover transform hover:scale-105 transition duration-300" />
+            <h4 class="font-semibold text-lg">Jules</h4>
+            <p class="text-sm text-slate-500">Senior Grooming Specialist</p>
+            <p class="text-sm text-slate-600 mt-2">Jules brings 10+ years of experience in dog styling and is known for show-quality cuts with flair.</p>
+          </div>
+    
+          <!-- Sam -->
+          <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fade-in delay-200">
+            <img src="images/staff3.png" alt="Concierge" class="rounded-full w-64 h-64 mx-auto mb-4 object-cover transform hover:scale-105 transition duration-300" />
+            <h4 class="font-semibold text-lg">Sam</h4>
+            <p class="text-sm text-slate-500">Pup Concierge</p>
+            <p class="text-sm text-slate-600 mt-2">Whether it’s booking spa time or event RSVPs, Sam ensures every pup feels like royalty.</p>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    
+    <style>
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 0.8s ease-out forwards;
+      opacity: 0;
+    }
+    .animate-fade-in.delay-100 {
+      animation-delay: 0.1s;
+    }
+    .animate-fade-in.delay-200 {
+      animation-delay: 0.2s;
+    }
+    </style>
+
+    <!-- Mission and Values Redesign -->
+<section class="relative py-24 bg-gradient-to-br from-blue-50 via-white to-green-50 overflow-hidden">
+  <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[600px] h-[600px] bg-blue-200 opacity-20 blur-3xl rounded-full"></div>
+  <div class="max-w-5xl mx-auto px-6 relative z-10 text-center">
+    <h2 class="text-3xl font-bold text-blue-900 mb-4 animate-fade-in">What We Believe</h2>
+    <p class="text-lg text-slate-700 mb-12 animate-fade-in delay-100">
+      Every pup that walks through our doors deserves more than just care — they deserve a full-on experience. Here’s what makes Puppy Playhouse truly special.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition animate-fade-in">
+        <div class="text-5xl mb-4">🐾</div>
+        <h3 class="text-xl font-semibold text-blue-800 mb-2">Purpose-Driven Care</h3>
+        <p class="text-slate-600 text-sm">
+          Every moment, from sniff sessions to nap time, is thoughtfully curated by our expert team to meet each dog’s unique needs.
+        </p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition animate-fade-in delay-100">
+        <div class="text-5xl mb-4">🏡</div>
+        <h3 class="text-xl font-semibold text-blue-800 mb-2">A Home Away From Home</h3>
+        <p class="text-slate-600 text-sm">
+          With plush beds, familiar scents, and warm-hearted handlers, our space feels just like home — but with more belly rubs.
+        </p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition animate-fade-in delay-200">
+        <div class="text-5xl mb-4">✨</div>
+        <h3 class="text-xl font-semibold text-blue-800 mb-2">Elevated Experiences</h3>
+        <p class="text-slate-600 text-sm">
+          Think spa days, enrichment games, and themed events designed to delight dogs and their humans alike.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+  opacity: 0;
+}
+.animate-fade-in.delay-100 {
+  animation-delay: 0.1s;
+}
+.animate-fade-in.delay-200 {
+  animation-delay: 0.2s;
+}
+</style>
+
+
+    
+
+   <!-- CTA -->
+<section class="relative py-28 bg-gradient-to-br from-blue-100 via-white to-green-100 text-center overflow-hidden">
+  <div class="absolute top-0 left-0 w-96 h-96 bg-blue-200 opacity-20 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-0 right-0 w-72 h-72 bg-green-200 opacity-20 blur-2xl rounded-full"></div>
+  <div class="relative z-10">
+    <h3 class="text-4xl font-extrabold text-slate-800 mb-4 animate-fade-in">Come Visit Us!</h3>
+    <p class="text-lg text-slate-600 max-w-xl mx-auto mb-6 animate-fade-in delay-100">
+      Schedule a tour, meet the team, and let your pup explore what we’re all about — one tail wag at a time.
+    </p>
+    <a href="contact.html"
+       class="inline-block px-8 py-4 text-white bg-blue-500 hover:bg-blue-600 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300">
+      Schedule a Visit
+    </a>
+  </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-12 mt-24">
+      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div>
+          <h2 class="text-2xl font-semibold text-slate-800 mb-3">Puppy Playhouse</h2>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Where canine care meets class — offering premier grooming, play, and boarding services designed with love and luxury.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-medium text-slate-700 mb-4">Explore</h3>
+          <ul class="space-y-2 text-sm text-slate-600">
+            <li><a href="about.html" class="hover:text-blue-500 transition">About Us</a></li>
+            <li><a href="services.html" class="hover:text-blue-500 transition">Our Services</a></li>
+            <li><a href="events.html" class="hover:text-blue-500 transition">Events</a></li>
+            <li><a href="contact.html" class="hover:text-blue-500 transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-medium text-slate-700 mb-4">Connect With Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-slate-500 hover:text-blue-500 transition" aria-label="Instagram">
+              <!-- Instagram Icon -->
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M7.75 2A5.75 5.75 0 002 7.75v8.5A5.75 5.75 0 007.75 22h8.5A5.75 5.75 0 0022 16.25v-8.5A5.75 5.75 0 0016.25 2h-8.5zm0 1.5h8.5A4.25 4.25 0 0120.5 7.75v8.5A4.25 4.25 0 0116.25 20.5h-8.5A4.25 4.25 0 013.5 16.25v-8.5A4.25 4.25 0 017.75 3.5zM12 7a5 5 0 100 10 5 5 0 000-10zm0 1.5a3.5 3.5 0 110 7 3.5 3.5 0 010-7zm4.75-.75a.75.75 0 100 1.5.75.75 0 000-1.5z" />
+              </svg>
+            </a>
+            <a href="#" class="text-slate-500 hover:text-blue-500 transition" aria-label="Facebook">
+              <!-- Facebook Icon -->
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M13.5 2H11A5 5 0 006 7v3H3v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3.5V2z" />
+              </svg>
+            </a>
+            <a href="#" class="text-slate-500 hover:text-blue-500 transition" aria-label="TikTok">
+              <!-- TikTok Icon -->
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M16.5 2h-3v12a3 3 0 11-3-3v-3h-3v3a6 6 0 106 6c1.657 0 3-1.343 3-3V7.735A7.013 7.013 0 0016.5 2z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 text-center text-sm text-slate-500">
+        &copy; 2025 Puppy Playhouse. All rights reserved.
+      </div>
+    </footer>
+
+  </body>
+</html>
